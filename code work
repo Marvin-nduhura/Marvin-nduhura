@@ -1,0 +1,33 @@
+//nduhura marvin 2023/A/KCS/3827/F
+
+<?php
+$n=readline("Name: ");
+
+$dateOfBirth=(readline("date of birth(dd-mm-yyyy): "));
+
+$h=readline("Home: ");
+
+//handle errors 
+
+try{
+
+    $birthDtate=new DateTime($dateOfBirth);
+
+    // age
+
+    $a=date('Y')- $birthDtate->format('Y');
+
+// message
+
+print("Welcome $n ! Back Home at $h and you are $a years now.");
+
+
+
+}catch(Exception $e){
+
+    echo "Invalid Date of Birth format Format";
+
+}
+
+?>
+
